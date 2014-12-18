@@ -1,0 +1,17 @@
+--- settings.py.orig	2014-12-10 11:57:34.073469846 +0100
++++ settings.py	2014-12-10 11:58:13.233664031 +0100
+@@ -58,8 +58,12 @@
+ 
+ DATABASES = {
+     'default': {
+-        'ENGINE': 'django.db.backends.sqlite3',
+-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
++        'ENGINE': 'django.db.backends.postgis',
++	'NAME': 'postgis_cookbook',
++	'USER': 'me',
++	'PASSWORD': 'mypassword',
++	'HOST': 'localhost',
++	'PORT': '',
+     }
+ }
+ 
